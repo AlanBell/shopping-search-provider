@@ -3,6 +3,8 @@ shopping-search-provider
 
 A search provider for gnome shell that allows you to shop for things.
 
+To install the latest stable reviewed version go to https://extensions.gnome.org/extension/564/amazon-shopping/
+
 There are a number of settings you can tweak for this extension using the gnome-tweak-tool or the settings button
 on https://extensions.gnome.org/local/
 
