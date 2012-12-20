@@ -1,0 +1,88 @@
+
+.shopping-grid {
+    spacing: 36px;
+    -shell-grid-horizontal-item-size: 510px;
+    -shell-grid-vertical-item-size: 170px;
+}
+
+.shopping-dark {
+    border-radius: 10px;
+    border: 1px rgba(255,255,255,0.5);
+    transition-duration: 500;
+}
+
+.shopping-dark:hover,
+.shopping-dark:focus {
+    background-color: rgba(0,0,0,0.5);
+    border: 1px rgba(255,255,255,1);
+    transition-duration: 500;
+}
+
+.shopping-content-dark {
+    width: 500px;
+    height: 170px;
+    border-radius: 10px;
+    padding: 8px;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.shopping-icon-dark {
+    border-radius: 4px;
+}
+
+.shopping-details-dark {
+    color: rgb(255,255,255);
+    border-radius: 4px;
+    border: 1px rgba(255,255,255,0);
+    padding: 0px 6px 22px 10px;
+}
+
+.shopping-details-title-dark {
+    font-size: 18px;
+    padding-bottom: 8px;
+}
+
+.shopping-details-extract-dark {
+    font-size: 12px;
+}
+
+/*---------------------------------*/
+
+.shopping-light {
+    border-radius: 10px;
+    transition-duration: 500;
+}
+
+.shopping-light:hover,
+.shopping-light:focus {
+    background-color: rgba(255,255,255,0.5);
+    transition-duration: 500;
+}
+
+.shopping-content-light {
+    width: 500px;
+    height: 170px;
+    border-radius: 10px;
+    padding: 8px;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.shopping-icon-light {
+    border-radius: 4px;
+}
+
+.shopping-details-light {
+    color: rgb(0,0,0);
+    border-radius: 4px;
+    border: 1px rgba(0,0,0,0);
+    padding: 0px 6px 22px 10px;
+}
+
+.shopping-details-title-light {
+    font-size: 18px;
+    padding-bottom: 8px;
+}
+
+.shopping-details-extract-light {
+    font-size: 12px;
+}

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemalist gettext-domain="gnome-shell-extensions">
+
+  <enum id='org.gnome.shell.extensions.shopping-search-provider.Themes'>
+    <value value='0' nick='light'/>
+    <value value='1' nick='dark'/>
+  </enum>
+  
+  <enum id="org.gnome.shell.extensions.shopping-search-provider.shops">
+    <value value="0" nick="co.uk"/>
+    <value value="1" nick="de"/>
+    <value value="2" nick="com"/>
+    <value value="3" nick="ca"/>
+    <value value="4" nick="fr"/>
+    <value value="5" nick="co.jp"/>
+    <value value="6" nick="it"/>
+    <value value="7" nick="cn"/>
+    <value value="8" nick="es"/>
+  </enum>
+  
+  <schema path="/org/gnome/shell/extensions/shopping-search-provider/" id="org.gnome.shell.extensions.shopping-search-provider">
+
+    <key type="s" name="keyword">
+      <default>"a"</default>
+      <summary>Search keyword</summary>
+      <description>Search keyword</description>
+    </key>
+    
+    <key type="s" name="backend">
+      <default>"http://products.libertus.co.uk"</default>
+      <summary>Back end search proxy</summary>
+      <description>Back end search</description>
+    </key>
+
+    <key name="default-shop" type="s">
+      <default>"com"</default>
+      <summary>Shop</summary>
+      <description>Shop (the bit that comes after "www.amazon.")</description>
+    </key>
+<!-- This is GPLv2 or above code, you can change the default affiliate code
+and redistribute it if you want. You can even prevent users from changing it
+easily by not exposing it as a setting. If you do change the default then
+please run your own server back end and change the backend default value too.
+If you decide to change the default ID and still use my back end server
+then I might change your affiliate code on the server side. -->
+    <key type="s" name="affiliate">
+      <default>"theopensou-21"</default>
+      <summary>Default affiliate</summary>
+      <description>Default affiliate</description>
+    </key>
+
+    <key type="i" name="max-chars">
+      <default>450</default>
+    </key>
+
+    <key type="i" name="title-font-size">
+      <default>18</default>
+    </key>
+
+    <key type="i" name="extract-font-size">
+      <default>12</default>
+    </key>
+
+    <key type="i" name="result-width">
+      <default>500</default>
+    </key>
+
+    <key type="i" name="result-height">
+      <default>170</default>
+    </key>
+
+    <key type="i" name="delay-time">
+      <default>700</default>
+      <summary>Delay time</summary>
+      <description>Delay time in milliseconds.</description>
+    </key>
+
+    <key type="i" name="results-rows">
+      <default>5</default>
+      <summary>Max results rows</summary>
+      <description>Max results rows.</description>
+    </key>
+
+    <key name="theme" enum="org.gnome.shell.extensions.shopping-search-provider.Themes">
+      <default>"light"</default>
+      <summary>Theme</summary>
+      <description>Theme</description>
+    </key>
+
+  </schema>
+</schemalist>
