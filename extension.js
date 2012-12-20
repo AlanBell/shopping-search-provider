@@ -79,30 +79,54 @@ const ShoppingResultActor = new Lang.Class({
         let style_string = 
             'width: '+content_width+'px;'+
             'height: '+content_height+'px;'
-
+        
+        //start with a horizontal box layout, it will have icon and price on the left and title and description on the right
         let content = new St.BoxLayout({
             style_class: 'shopping-content-'+settings.get_string(Prefs.SHOP_THEME),
             style: style_string,
             vertical: false
         });
-
         this.actor.set_child(content);
+
+        let leftcontent = new St.BoxLayout({
+            vertical: true
+        });
+        content.add(leftcontent)
+        let rightcontent = new St.BoxLayout({
+            vertical: true
+        });
+        content.add(rightcontent);
 
         if(resultMeta.show_icon) {
             let icon = get_icon(resultMeta.image,resultMeta.iconx, resultMeta.icony);
-            content.add(icon, {
-                x_fill: false,
-                y_fill: false,
+            leftcontent.add(icon, {
+                x_fill: true,
+                y_fill: true,
                 x_align: St.Align.START,
                 y_align: St.Align.MIDDLE,
             });
         }
+        
+        if(resultMeta.price){
+            let price = new St.Label({
+                text: resultMeta.price,
+                style_class: 'shopping-details-title-'+settings.get_string(Prefs.SHOP_THEME),
+                style: 'font-size: '+settings.get_int(Prefs.SHOP_TITLE_FONT_SIZE)+'px;'
+            });
+            leftcontent.add(price, {
+                x_fill: false,
+                y_fill: false,
+                x_align: St.Align.MIDDLE,
+                y_align: St.Align.MIDDLE,
+            });
+        }
+        
         let details = new St.BoxLayout({
             style_class: 'shopping-details-'+settings.get_string(Prefs.SHOP_THEME),
             vertical: true
         });
 
-        content.add(details, {
+        rightcontent.add(details, {
             x_fill: false,
             y_fill: false,
             x_align: St.Align.START,
@@ -213,6 +237,7 @@ const ShoppingProvider = new Lang.Class({
                         result.push({
                             "id": Items[item]['DetailPageURL'],
                             "title": Items[item]['ItemAttributes']['Title'],
+                            "price": Items[item]['OfferSummary'] ? Items[item]['OfferSummary']['LowestNewPrice'] ? Items[item]['OfferSummary']['LowestNewPrice']['FormattedPrice']:'':'',
                             "image": Items[item]['MediumImage'] ? Items[item]['MediumImage']['URL']:'',
                             "iconx": Items[item]['MediumImage'] ? Items[item]['MediumImage']['Width']['_']:'',
                             "icony": Items[item]['MediumImage'] ? Items[item]['MediumImage']['Height']['_']:'',
@@ -340,7 +365,8 @@ const ShoppingProvider = new Lang.Class({
                 'show_icon': result[i].show_icon,
                 'image': result[i].image,
                 'iconx': result[i].iconx,
-                'icony': result[i].icony
+                'icony': result[i].icony,
+                'price': result[i].price
                 });
         }
 

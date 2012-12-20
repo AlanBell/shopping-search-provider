@@ -1,2 +1,2 @@
-{"shell-version": ["3.6.2"], "uuid": "shopping@libertus.co.uk", "name": "Amazon Shopping", "description": "Purchase things from Amazon online stores",
+{"shell-version": ["3.6.2"], "uuid": "shopping@libertus.co.uk", "name": "Shopping Search Provider", "description": "Purchase things from Amazon online stores",
 "settings-schema": "org.gnome.shell.extensions.shopping-search-provider" }
