@@ -44,7 +44,7 @@ please run your own server back end and change the backend default value too.
 If you decide to change the default ID and still use my back end server
 then I might change your affiliate code on the server side. -->
     <key type="s" name="affiliate">
-      <default>"theopensou-21"</default>
+      <default>"theopesou-21"</default>
       <summary>Default affiliate</summary>
       <description>Default affiliate</description>
     </key>

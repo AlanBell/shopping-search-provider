@@ -36,7 +36,7 @@ keys for the search API. You can register on Amazon to get such keys.
   This is an Amazon affiliate ID. It gives someone a commission if you buy stuff. It defaults to mine because I am
 not stupid, but you can change it because I am not evil either. You might want to set it to 
 gnomestore-20 to benefit the Gnome Foundation or electronicfro-20 to help out the Electronic Frontier Foundation
-or pick another beneficiary of your choice. Would be rather smashing if you left it on theopensou-21 at least for a bit
+or pick another beneficiary of your choice. Would be rather smashing if you left it on theopesou-21 at least for a bit
 though.
 
 The rest of the parameters are fairly self explanatory and relate to the size of the boxes and fonts and suchlike.
