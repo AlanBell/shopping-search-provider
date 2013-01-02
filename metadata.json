@@ -1,2 +1,5 @@
-{"shell-version": ["3.6.2"], "uuid": "shopping@libertus.co.uk", "name": "Shopping Search Provider", "description": "Purchase things from Amazon online stores",
+{"shell-version": ["3.4","3.6.2"],
+"uuid": "shopping@libertus.co.uk", 
+"name": "Shopping Search Provider", 
+"description": "Purchase things from Amazon online stores\n in the settings you can set the shop domain to any one of co.uk,de,com,ca,fr,co.jp,it,cn,es and you can change the affiliate ID to support as you shop. Change it to gnomestore-20 to support the Gnome foundation or leave the default to support the author."),
 "settings-schema": "org.gnome.shell.extensions.shopping-search-provider" }
