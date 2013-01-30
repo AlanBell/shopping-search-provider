@@ -73,8 +73,8 @@ const ShoppingResultActor = new Lang.Class({
             track_hover: true,
             accessible_role: Atk.Role.PUSH_BUTTON
         });
-
-        let content_width = settings.get_int(Prefs.SHOP_RESULT_WIDTH);
+        let monitor = Main.layoutManager.primaryMonitor;
+        let content_width = monitor.width/4;
         let content_height = settings.get_int(Prefs.SHOP_RESULT_HEIGHT);
         let style_string = 
             'width: '+content_width+'px;'+
@@ -429,8 +429,8 @@ function enable() {
         let provider_meta = search_results._metaForProvider(shoppingProvider);
         provider_meta.resultDisplay._grid.actor.style_class = 'shopping-grid';
         provider_meta.resultDisplay._grid._rowLimit = settings.get_int(Prefs.SHOP_RESULTS_ROWS);
-
-        let width = settings.get_int(Prefs.SHOP_RESULT_WIDTH);
+        let monitor = Main.layoutManager.primaryMonitor;
+        let width = monitor.width/4;
         let height = settings.get_int(Prefs.SHOP_RESULT_HEIGHT); 
         provider_meta.resultDisplay._grid.actor.style = 
             '-shell-grid-horizontal-item-size: '+width+'px;'+
