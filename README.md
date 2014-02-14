@@ -40,3 +40,8 @@ or pick another beneficiary of your choice. Would be rather smashing if you left
 though.
 
 The rest of the parameters are fairly self explanatory and relate to the size of the boxes and fonts and suchlike.
+
+License
+=======
+This is a gnome-shell extension so it follows the convention that extensions are GPLv2+ licensed. This applies to both the code running on your computer and the server
+side code that is included in the repository for reference. The only bit of server side code actually running that is different to the code in the repository is the Amazon API keys.
